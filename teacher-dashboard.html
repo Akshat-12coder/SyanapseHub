@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT PANEL - APPROVALS -->
+    <div class="left">
+      <h3>Pending Approvals</h3>
+      <ul id="approvalList"></ul>
+
+      <h3>Pending Notes</h3>
+      <ul id="pendingNotesList"></ul>
+
+      <h3>Session Requests</h3>
+      <ul id="sessionRequestsList"></ul>
+
+      <h3>AI Verifier</h3>
+      <button onclick="runAIVerifier()">Run AI Verification</button>
+
+      <h3>Teacher Verifier</h3>
+      <button onclick="runTeacherVerifier()">Run Teacher Verification</button>
+
+      <h3>Projects Reviews</h3>
+      <button onclick="reviewProjects()">Review Projects</button>
+
+      <h3>Assignment Solution</h3>
+      <button onclick="provideAssignmentSolution()">Provide Solution</button>
+    </div>
+
+    <!-- MIDDLE PANEL - CHAT -->
+    <div class="middle">
+        <input id="userSearch" placeholder="Search user by name...">
+<ul id="searchResults"></ul>
+
+      <h3>Teacher Chat</h3>
+
+      <div id="chatBox"></div>
+
+      <input id="msg" placeholder="Type message">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- RIGHT PANEL - COMMUNITY -->
+    <div class="right">
+      <h3>Communities</h3>
+      <ul id="communityList"></ul>
+
+      <h3>Live Doubt Clearing</h3>
+      <button onclick="startLiveSession()">Start Live Session</button>
+      <div id="liveSessionStatus" style="margin-top: 10px; display: none;">
+        <p>Session Active</p>
+        <button onclick="endLiveSession()">End Session</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>

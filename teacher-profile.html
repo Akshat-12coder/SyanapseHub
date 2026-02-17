@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher Profile Setup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+
+  <div class="card">
+    <h2>Teacher Profile Setup</h2>
+
+    <input id="tname" placeholder="Teacher Name">
+    <input id="tphone" placeholder="Phone Number">
+
+    <label>Course</label>
+    <select id="course">
+      <option value="BTech">BTech</option>
+      <option value="BBA">BBA</option>
+      <option value="BA">BA</option>
+      <option value="BCA">BCA</option>
+      <option value="MCA">MCA</option>
+      <option value="MBA">MBA</option>
+      <option value="BSc">BSc</option>
+      <option value="BSc-Life Science">BSc-Life Science</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <input id="otherCourse" placeholder="Enter Course (if Other)" style="display:none;">
+
+    <label>Semesters Teaching</label>
+    <select id="semesters" multiple>
+      <option value="Sem 1">Sem 1</option>
+      <option value="Sem 2">Sem 2</option>
+      <option value="Sem 3">Sem 3</option>
+      <option value="Sem 4">Sem 4</option>
+      <option value="Sem 5">Sem 5</option>
+      <option value="Sem 6">Sem 6</option>
+      <option value="Sem 7">Sem 7</option>
+      <option value="Sem 8">Sem 8</option>
+    </select>
+
+    <button onclick="saveTeacherProfile()">Save</button>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

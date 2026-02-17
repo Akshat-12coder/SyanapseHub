@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Setup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+
+  <div class="card">
+    <h2>Setup Profile</h2>
+
+    <input id="name" placeholder="Name">
+    <input id="phone" placeholder="Phone">
+
+    <label>Skills</label>
+    <select id="skills" multiple>
+      <option>Robotics</option>
+      <option>Computer Science</option>
+      <option>Communication</option>
+      <option>AI</option>
+      <option>Web Dev</option>
+    </select>
+
+    <label>Account Type</label>
+    <select id="privacy">
+      <option value="public">Public</option>
+      <option value="private">Private</option>
+    </select>
+
+    <button onclick="saveProfile()">Save / Update</button>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

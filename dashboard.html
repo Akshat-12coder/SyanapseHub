@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+
+     <!-- LEFT PANEL -->
+    <div class="left">
+      <h3>Search Notes</h3>
+
+      <!-- DEPARTMENT -->
+      <select id="departmentSelect">
+        <option value="">Select Department</option>
+      </select>
+
+      <!-- SEMESTER -->
+      <select id="semesterSelect" disabled>
+        <option value="">Select Semester</option>
+      </select>
+
+      <!-- SUBJECT -->
+      <select id="subjectSelect" disabled>
+        <option value="">Select Subject</option>
+      </select>
+
+      <!-- NOTES LIST -->
+      <ul id="notesList"></ul>
+
+      <h3>Upload Notes</h3>
+
+      <input type="file" id="fileInput">
+
+      <button type="button" onclick="uploadNote()">
+        Upload
+      </button>
+    </div>
+
+
+    <!-- MIDDLE PANEL -->
+    <div class="middle">
+      <h3>Chat</h3>
+
+      <!-- USER SEARCH -->
+      <input id="userSearch" placeholder="Search user by name...">
+      <ul id="searchResults"></ul>
+
+      <hr>
+
+      <!-- CHAT AREA -->
+      <div id="chatBox"></div>
+
+      <input id="msg" placeholder="Type message">
+      <button onclick="sendMessage()">Send</button>
+
+      <hr><hr>
+
+      <h3>Project Collaboration</h3>
+
+      <button id="openProjectFormBtn">
+        🚀 Start Project Collaboration
+      </button>
+
+      <div id="projectForm" style="display:none; margin-top:10px;">
+        <input id="projectName" placeholder="Project Name">
+        <input id="projectDesc" placeholder="Short Description">
+        <input id="projectContact" placeholder="Contact Info">
+        <button id="sendProjectBtn">Post to Chat</button>
+      </div>
+
+      <h3>Active Projects</h3>
+      <ul id="projectList"></ul>
+
+      <button onclick="window.location.href='study.html'">
+        🚀 Open Squad Study Mode
+      </button>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+      <h3>Community Hub</h3>
+
+      <ul id="communityList"></ul>
+
+      <hr>
+
+      <input id="communityName" placeholder="Community Name">
+      <input id="communityDesc" placeholder="Description">
+      <button id="createCommunityBtn">
+        Pay ₹500 & Create
+      </button>
+
+      <h3>Request Live Session</h3>
+      <select id="requestCourse">
+        <option value="">Select Course</option>
+      </select>
+      <select id="requestSemester" disabled>
+        <option value="">Select Semester</option>
+      </select>
+      <button id="requestSessionBtn">Pay ₹50 & Request Session</button>
+
+      <h3>My Accepted Sessions</h3>
+      <ul id="acceptedSessionsList"></ul>
+    </div>
+
+  </div>
+  <!-- END CONTAINER -->
+
+
+  <!-- SCRIPTS -->
+  <script type="module" src="app.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</body>
+</html>
